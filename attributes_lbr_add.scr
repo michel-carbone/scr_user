@@ -1,4 +1,6 @@
+TECHNOLOGY '';
 Attribute MANUFACTURER_NAME '' variable;
 Attribute MANUFACTURER_REF '' variable;
 Attribute HEIGHT '' variable;
 Attribute PARTNO '' variable;
+Attribute DNP '' variable;
