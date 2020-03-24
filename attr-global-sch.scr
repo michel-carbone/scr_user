@@ -1,0 +1,6 @@
+attribute * PARTLIST '';
+attribute * AUTHOR '';
+attribute * DCT '';
+attribute * SCH_PA '';
+attribute * SCH_REF '';
+attribute * SCH_REV '';
