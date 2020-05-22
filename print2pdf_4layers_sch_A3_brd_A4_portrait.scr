@@ -1,0 +1,34 @@
+# Michel Carbone <michel.c12 (at) gmail (dot) com>
+# Namur, Belgium
+# 22/05/2020 rev. 1.0
+# script that automate printing to A3 pdf files of a schematic and a board layout
+#
+# switch to BRD in order to print layers and silkscreen of board
+EDIT .brd
+DISPLAY NONE 1 17 18 19 20 21 23 25;
+Ratsnest;
+PRINT 1 -1 PORTRAIT PAPER A4 FILE %N_r01.pdf;
+#
+DISPLAY NONE 2 17 18 19 20;
+Ratsnest;
+PRINT 1 -1 PORTRAIT PAPER A4 FILE %N_r02.pdf;
+#
+DISPLAY NONE 15 17 18 19 20;
+Ratsnest;
+PRINT 1 -1 PORTRAIT PAPER A4 FILE %N_r15.pdf;
+#
+DISPLAY NONE 16 17 18 19 20 22 24 26;
+Ratsnest;
+PRINT 1 -1 PORTRAIT PAPER A4 FILE %N_r16.pdf;
+#
+DISPLAY NONE 17 18 19 20 21 23 25 51;
+Ratsnest;
+PRINT 1 -1 PORTRAIT PAPER A4 FILE %N_s01.pdf;
+#
+DISPLAY NONE 17 18 19 20 22 24 26 52;
+Ratsnest;
+PRINT 1 -1 PORTRAIT MIRROR PAPER A4 FILE %N_s16.pdf;
+#
+# switch to SCH in order to  print all sheets of schematic
+EDIT .sch;
+PRINT 1 -1 PAPER A3 LANDSCAPE SHEETS ALL FILE %N_sch.pdf;
